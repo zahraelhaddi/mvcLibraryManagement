@@ -1,0 +1,56 @@
+<%- include('parts/top.ejs')%> <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <form method="POST" action="/mybooks/update" enctype="multipart/form-data">
+            <%if (Smessage) {%>
+                <div class="alert alert-success" role="alert">
+                    <%= Smessage%>
+                </div>
+                <%}%>
+
+                    <%if (Emessage) {%>
+                        <div class="alert alert-danger" role="alert">
+                            <%= Emessage%>
+                        </div>
+                        <%}%>
+
+                            <div class="form-group">
+                                <label>Book Title</label>
+                                <input type="text" class="form-control" name="title" value="<%=updatebook.title%>">
+                            </div>
+                            <input type="hidden" name="bookId" value="<%=updatebook._id%>">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea type="text" class="form-control"
+                                    name="description"> <%=updatebook.description%></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Author</label>
+                                <input type="text" class="form-control" name="author" value="<%=updatebook.author%>">
+                            </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="number" class="form-control" name="price" value="<%=updatebook.price%>">
+                            </div>
+
+                            <img style="height:50px;width: 50px;" src="/uploads/<%=updatebook.image%>">
+                            <input type="hidden" name="oldimage" value="<%=updatebook.image%>">
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input type="file" class="form-control" name="image">
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+
+
+    <%- include('parts/bottom.ejs')%>

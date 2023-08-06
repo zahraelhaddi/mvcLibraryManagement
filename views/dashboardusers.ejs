@@ -1,0 +1,80 @@
+<%- include ('partsadmin/top')%>
+    <!-- Sidebar -->
+    <%- include ('partsadmin/sidebar')%>
+        <!-- Sidebar -->
+
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <%- include ('partsadmin/navbar')%>
+                    <!-- Topbar -->
+
+                    <!-- Container Fluid-->
+                    <div class="container-fluid" id="container-wrapper">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">DataTables</h1>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="./">Home</a></li>
+                                <li class="breadcrumb-item">Tables</li>
+                                <li class="breadcrumb-item active" aria-current="page">DataTables</li>
+                            </ol>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="row">
+
+                            <!-- DataTable with Hover -->
+                            <div class="col-lg-12">
+                                <div class="card mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">DataTables with Hover</h6>
+                                    </div>
+                                    <div class="table-responsive p-3">
+                                        <table class="table align-items-center table-flush table-hover"
+                                            id="dataTableHover">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Password</th>
+                                                </tr>
+                                                <% for (user of users) {%>
+                                                    <tr>
+
+                                                        <td>
+                                                            <%=user.name%>
+                                                        </td>
+                                                        <td>
+                                                            <%=user.email%>
+                                                        </td>
+                                                        <td>
+                                                            <%=user.password%>
+                                                        </td>
+
+                                                    </tr>
+                                                    <%}%>
+                                            </thead>
+
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Row-->
+
+
+
+
+                    </div>
+                    <!---Container Fluid-->
+            </div>
+            <!-- Footer -->
+            <%- include ('partsadmin/footer')%>
+                <!-- Footer -->
+        </div>
+        </div>
+
+        <%- include ('partsadmin/bottom')%>
