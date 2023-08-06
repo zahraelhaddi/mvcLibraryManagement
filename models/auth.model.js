@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
 
-var url = "mongodb+srv://ZahraAdmin:ZahraAdmin1@cluster0.nbwvnkd.mongodb.net/library"
+var url = "mongodb+srv://ZahraAdmin:<MongoDbpass>@cluster0.nbwvnkd.mongodb.net/library"
 
 var AuthSchema = mongoose.Schema({
     name: String,
