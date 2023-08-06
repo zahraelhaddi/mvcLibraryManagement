@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose')
 
-var url = "mongodb+srv://ZahraAdmin:ZahraAdmin1@cluster0.nbwvnkd.mongodb.net/library"
+var url = "mongodb+srv://ZahraAdmin:<MongoDbpass>@cluster0.nbwvnkd.mongodb.net/library"
 var schemaBooks = mongoose.Schema({
     title: String,
     description: String,
